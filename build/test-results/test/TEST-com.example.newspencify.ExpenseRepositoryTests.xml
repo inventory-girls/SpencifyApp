@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.newspencify.ExpenseRepositoryTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-28T15:51:18" hostname="EXPQ2WMJ9T65C" time="0.22">
+  <properties/>
+  <testcase name="testFindAll()" classname="com.example.newspencify.ExpenseRepositoryTests" time="0.22"/>
+  <system-out><![CDATA[16:51:16.853 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [ExpenseRepositoryTests]: using SpringBootContextLoader
+16:51:16.856 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.example.newspencify.ExpenseRepositoryTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:51:16.856 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.newspencify.ExpenseRepositoryTests]: ExpenseRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:51:16.874 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper -- Using ContextCustomizers for test class [ExpenseRepositoryTests]: [DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer]
+16:51:16.928 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [/Users/miajimenez/Documents/Multiverse/Bootcamp/kotlin/spencify/SpencifyApp/build/classes/kotlin/main/com/example/newspencify/NewSpencifyApplication.class]
+16:51:16.938 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.newspencify.NewSpencifyApplication for test class com.example.newspencify.ExpenseRepositoryTests
+16:51:16.947 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper -- Using TestExecutionListeners for test class [ExpenseRepositoryTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+16:51:16.948 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [ExpenseRepositoryTests], class annotated with @DirtiesContext [false] with mode [null]
+16:51:16.954 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener -- Performing dependency injection for test class com.example.newspencify.ExpenseRepositoryTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-03-28T16:51:17.106+01:00  INFO 97387 --- [    Test worker] c.e.newspencify.ExpenseRepositoryTests   : Starting ExpenseRepositoryTests using Java 17.0.6 with PID 97387 (started by miajimenez in /Users/miajimenez/Documents/Multiverse/Bootcamp/kotlin/spencify/SpencifyApp)
+2023-03-28T16:51:17.107+01:00  INFO 97387 --- [    Test worker] c.e.newspencify.ExpenseRepositoryTests   : No active profile set, falling back to 1 default profile: "default"
+2023-03-28T16:51:17.290+01:00  INFO 97387 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-28T16:51:17.320+01:00  INFO 97387 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interfaces.
+2023-03-28T16:51:17.474+01:00  INFO 97387 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-28T16:51:17.498+01:00  INFO 97387 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-28T16:51:17.626+01:00  INFO 97387 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-28T16:51:17.806+01:00  INFO 97387 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c234920
+2023-03-28T16:51:17.807+01:00  INFO 97387 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-28T16:51:17.840+01:00  INFO 97387 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-28T16:51:18.108+01:00  INFO 97387 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-28T16:51:18.112+01:00  INFO 97387 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-28T16:51:18.295+01:00  INFO 97387 --- [    Test worker] c.e.newspencify.ExpenseRepositoryTests   : Started ExpenseRepositoryTests in 1.307 seconds (process running for 2.483)
+Hibernate: select e1_0.id,e1_0.amount,e1_0.category,e1_0.date,e1_0.description,e1_0.image from expenses e1_0
+Find AllExpenses{id=1, description='Food for clients', category=Food, image=https://rb.gy/ojufvhlo, date=2023-03-28 16:32:03.853}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

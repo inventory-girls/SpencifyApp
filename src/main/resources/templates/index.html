@@ -1,12 +1,194 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Welcome to my application</title>
-    <link rel="stylesheet"type="text/css" th:href="@{/webjars/bootstrap/css/bootsrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" href="css/style.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        hr {
+            /* width: 50%; */
+            border: none;
+            border-top: 1px solid black;
+            margin-bottom: 15%;
+            margin-top: 10%;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input {
+            border: 1px solid black;
+            padding: 20px;
+            width: 80%;
+            background-color: rgb(220, 218, 218);}
+
+        input#title {
+            width: 80%;
+            background-color: rgb(220, 218, 218);
+        }
+
+        input#description {
+            width: 80%;
+            background-color: rgb(220, 218, 218);
+
+        }
+
+        label[for="attachments"] {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        label[for="attachments"] {
+            text-align: left;
+            margin-top: 40px;
+
+        }
+
+        .attachment-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+
+        }
+
+        .upload-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 80px;
+            border: 1px solid black;
+            text-align: center;
+            margin-top: 10px;
+            background-color: rgb(220, 218, 218);
+        }
+
+        .upload-box img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+
+        }
+
+        .headings{
+            margin-top: 10px;
+            align-content: center;
+        }
+
+        .add-another {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .add-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(220, 218, 218);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            margin-top: 20%;
+        }
+
+        .add-button {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .add-button span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0b1520;
+        }
+
+        .add-text {
+            font-size: 16px;
+            margin-top: 20%;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(220, 218, 218);
+            color: rgb(20, 16, 16);
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10%;
+        }
+        </style>
 </head>
+
 <body>
-<h1>Spencify</h1>
-<h2><a href="/getAllExpenses"> Log in</a></h2>
+<div class="headings">
+    <h2>Spencify</h2>
+    <hr style="width: 100%;">
+    <form>
+        <label for="category">Category:</label><br>
+        <input type="text" id="category" name="category"><br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="description">Description:</label><br>
+        <input type="description" id="description" name="description"><br>
+    </form>
+</div>
+<label for="attachment">Attachments:</label>
+<div class="attachment-container">
+    <div class="upload-box">
+        <img src="698648.png" alt="Upload Cloud">
+        <span>Upload Document</span>
+    </div>
+    <div class="add-another">
+        <div class="add-circle">
+            <div class="add-button">
+                <span>+</span>
+            </div>
+        </div>
+        <div class="add-text">Add another</div>
+    </div>
+    <button type="add">Add</button>
+</div>
+<hr style="width: 50%;">
+
+
+
 </body>
 </html>
